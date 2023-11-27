@@ -65,6 +65,15 @@ for index, row in planet_df_1.iterrows():
 # Remova o caractere '\n' dos dados coletados
 scraped_data = []
 
+for row in new_planets_data:
+    replaced = []
+    ## ADICIONE O CÓDIGO AQUI ##
+    for el in row:
+        el = el.replace("\n", "")
+        replaced.append(el)
+    scraped_data.append(replaced)
+
+print(scraped_data)
 
 headers = ["planet_type","discovery_date", "mass", "planet_radius", "orbital_radius", "orbital_period", "eccentricity", "detection_method"]
 
